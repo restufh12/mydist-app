@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return view('index'); });
+Route::post('/cek_store', 'AuthController@cek_store');
+Route::get('/login', 'AuthController@login');
+
+
+// Route::get('/login_a', 'AuthController@test')->middleware('setdatabasestore');
+

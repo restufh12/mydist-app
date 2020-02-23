@@ -43,7 +43,7 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-        'mysql' => [
+        'mysqlcloud' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
@@ -66,11 +66,11 @@ return [
         'mysqlstore' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST_STORE', '127.0.0.1'),
-            'port' => env('DB_PORT_STORE', '3306'),
-            'database' => env('DB_DATABASE_STORE', 'forge'),
-            'username' => env('DB_USERNAME_STORE', 'forge'),
-            'password' => env('DB_PASSWORD_STORE', ''),
+            'host' => '%host_store%',
+            'port' => '%port_store%',
+            'database' => '%database_store%',
+            'username' => '%username_store%',
+            'password' => '%password_store%',
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
